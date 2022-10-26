@@ -13,10 +13,10 @@ body::-webkit-scrollbar { width: 0rem; }
 
 .ring-img {
     /* transform: rotate(-30deg); */
-    animation: spin 10s infinite linear;
+    animation: spin 20s infinite linear;
     width: 150vh;
     position: absolute;
-    right: -20rem;
+    /* right: -20rem; */
 }
 
 @keyframes spin {
