@@ -1,0 +1,29 @@
+.footer-container {
+    width: inherit;
+    margin: 0px !important;
+    display: flex;
+    flex-direction: row;
+    background: black;
+    justify-content: space-between;
+    margin-top: 5vh !important;
+}
+
+.footer-info {
+    padding-left: 3rem;
+    text-align: left;
+    width: 45vw;
+}
+
+.footer-info h1 {
+    font-size: 3rem;
+}
+
+.footer-icons {
+    padding-right: 3rem;
+    width: 45vw;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 3rem;
+}

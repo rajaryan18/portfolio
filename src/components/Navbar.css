@@ -1,0 +1,32 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    color: white;
+    font-size: 1.05rem;
+}
+
+.nav-container h3 {
+    position: relative;
+    float: left;
+}
+
+.nav-container h3:hover {
+    cursor: default;
+}
+
+.nav-container h3::after {
+    background-color: white;
+    content: "";
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.35s ease 0s;
+    position: absolute;
+}
+
+.nav-container h3:hover::after {
+    width: 100%;
+}

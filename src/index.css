@@ -1,0 +1,11 @@
+body {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    /* background: linear-gradient(to bottom right, #060e13, #103452); */
+    background: rgb(15, 15, 15);
+    scrollbar-width: thin;
+    color: white;
+    text-align: center;
+}
+
+body::-webkit-scrollbar { width: 0rem; }

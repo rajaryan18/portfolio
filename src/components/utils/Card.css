@@ -1,0 +1,7 @@
+.card-container {
+    margin: 0 auto;
+    width: 85vw;
+    border-radius: 2rem;
+    height: 50vh;
+    background: rgb(31, 31, 30);
+}

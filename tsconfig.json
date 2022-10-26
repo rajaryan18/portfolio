@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "jsx": "react",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": [
+        "es6",
+        "dom",
+        "esnext"
+       ],
+      "strict": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "target": "esnext",
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "strictNullChecks": true,
+      "allowJs": true
+    },
+    "include": [
+      "module.d.ts",
+      "**/*.ts",
+      "**/*.tsx",
+      "src/**/*"
+    ],
+    // "include": [
+    //     "src"
+    // ],
+    "exclude": [
+      "node_modules"
+    ]
+}
