@@ -1,0 +1,50 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.about-text {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.about-image {
+    display: flex;
+    width: 35%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;    
+}
+
+.about-h1 {
+    height: 7rem;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.about-h1 h1 {
+    position: relative;
+    /* animation: drop 3s 1 linear forwards; */
+    font-size: 3rem;
+    animation: 0.8s linear 1 backwards slide;
+}
+
+@keyframes slide {
+    0% {
+        transform: skewX(30deg);
+        right: 0;
+        left: 30rem;
+    } 
+    100% {
+        transform: skewX(0deg);
+        right: 30rem;
+        left: 0;
+    }
+}

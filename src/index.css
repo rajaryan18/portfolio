@@ -16,10 +16,10 @@ body::-webkit-scrollbar { width: 0rem; }
     z-index: 1;
     overflow-y: hidden;
     animation: spin 20s infinite linear;
-    width: 170vh;
+    width: 110vh;
     position: fixed;
-    left: -30rem;
-    top: -8rem;
+    right: -30rem;
+    top: 5rem;
 }
 
 .app-card { 

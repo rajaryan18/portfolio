@@ -2,6 +2,8 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Card } from './components/utils/Card';
+import { Query } from './components/Query';
+import { About } from './components/About';
 
 const App = () => {
     return (
@@ -9,9 +11,9 @@ const App = () => {
             <Navbar />
             <img src="https://github.com/rajaryan18/portfolio/blob/main/src/images/ring.png?raw=true" alt="Image" className='ring-img' />
             <div className='app-card'>
-                <Card>
-                    <h1>HII</h1>
-                </Card>
+                <Card><About /></Card>
+                <Card></Card>
+                <Card><Query /></Card>
                 <Footer />
             </div>
         </>
