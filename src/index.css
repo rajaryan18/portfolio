@@ -12,11 +12,20 @@ body {
 body::-webkit-scrollbar { width: 0rem; }
 
 .ring-img {
-    /* transform: rotate(-30deg); */
+    display: flex;
+    z-index: 1;
+    overflow-y: hidden;
     animation: spin 20s infinite linear;
-    width: 150vh;
-    position: absolute;
-    /* right: -20rem; */
+    width: 170vh;
+    position: fixed;
+    left: -30rem;
+    top: -8rem;
+}
+
+.app-card { 
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
 }
 
 @keyframes spin {

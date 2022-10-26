@@ -6,6 +6,7 @@
     background: black;
     justify-content: space-between;
     margin-top: 5vh !important;
+    z-index: 2;
 }
 
 .footer-info {
