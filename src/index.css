@@ -6,6 +6,23 @@ body {
     scrollbar-width: thin;
     color: white;
     text-align: center;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar { width: 0rem; }
+
+.ring-img {
+    /* transform: rotate(-30deg); */
+    animation: spin 10s infinite linear;
+    width: 150vh;
+    position: absolute;
+    right: -20rem;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
