@@ -2,15 +2,12 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Card } from './components/utils/Card';
-// import { Image } from './components/utils/Image';
-// import ring from './images/ring.png';
 
 const App = () => {
     return (
         <>
             <Navbar />
-            <img src="./images/ring.png" height="500vh" width="500vh" color="white" />
-            {/* <Image src="./../../images/ring.png" alt="Ring" /> */}
+            <img src="https://github.com/rajaryan18/portfolio/blob/main/src/images/ring.png?raw=true" alt="Image" />
             {/* <Card>
                 <h1>HII</h1>
             </Card> */}
