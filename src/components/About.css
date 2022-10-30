@@ -1,15 +1,17 @@
 .about-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0 auto;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    margin: 2rem auto;
+    justify-content: center;
 }
 
 .about-text {
+    margin-top: 2rem;
+    margin-left: 1.7rem;
     display: flex;
     width: 60%;
-    align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: justify;
 }
 
@@ -19,20 +21,23 @@
 }
 
 .about {
+    margin: 0 0 5rem 0;
     display: flex;
-    flex-direction: column;    
+    flex-direction: row;
+    height: 80vh; 
 }
 
 .about-h1 {
+    /* margin-top: 5rem; */
     height: 7rem;
     text-align: left;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 .about-h1 h1 {
     position: relative;
     /* animation: drop 3s 1 linear forwards; */
-    font-size: 3rem;
+    font-size: 4.5rem;
     animation: 0.8s linear 1 backwards slide;
 }
 

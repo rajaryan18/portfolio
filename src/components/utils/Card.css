@@ -3,7 +3,8 @@
     width: 85vw;
     border-radius: 2rem;
     min-height: 50vh;
-    background: rgba(31, 31, 30, 0.8);
+    background: rgba(31, 31, 30, 0);
     display: flex;
     z-index: 2;
+    align-items: center;
 }

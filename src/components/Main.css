@@ -1,0 +1,102 @@
+@keyframes rot {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotopp {
+    from {
+        transform: rotate(360deg);
+    } to {
+        transform: rotate(0deg);
+    }
+}
+
+.main-container {
+    width: inherit;
+    padding: auto;
+    padding-top: 5rem;
+    margin: 0 auto;
+    /* align-items: center; */
+    animation: rot 50s infinite linear;
+    /* height: 100vh; */
+}
+
+.main-img {
+    display: flex;
+    padding: 0rem;
+    /* border: 1px solid white; */
+    border-radius: 35rem;
+    z-index: 12;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+}
+
+.main-img img {
+    border-radius: 30rem;
+    height: 30rem;
+    width: 30rem;
+    /* top: 145vh; */
+    margin: auto;
+}
+
+.main-head {
+    z-index: 15;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: -26rem;
+    left: 0;
+    /* left: -2rem; */
+    font-size: 1.5rem;
+    width:fit-content;
+    animation: rotopp 50s infinite linear;
+}
+
+.main-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid white; */
+    justify-content: space-evenly;
+    height: 45rem;
+}
+
+.main-skills {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    z-index: 10;
+    height: inherit;
+}
+
+.middle {
+    justify-content: space-between !important;
+}
+
+.main-skill {
+    width: 9rem;
+    padding: 1.5rem;
+    background: rgb(49, 46, 46);
+    margin: 1.4rem 0rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    height: fit-content;
+    animation: rotopp 50s infinite linear;
+}
+
+.main-skill:hover {
+    transform: scale(1.05);
+}
+
+.main-skill:active {
+    transform: scale(0.98);
+}

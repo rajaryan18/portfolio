@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: row-reverse;
     padding: 2vw;
-    justify-content: space-evenly;
-    width: inherit;
+    margin: 0 2rem;
+    justify-content: space-around;
+    width: 90%;
 }
 
 .query-vr {
@@ -14,10 +15,12 @@
 }
 
 .query-text {
+    height: fit-content;
     display: flex;
-    width: 40%;
+    width: 30%;
     align-items: center;
     justify-content: center;
+    background: rgba(15, 15, 15, 0.3);
 }
 
 .query-text h1 {
@@ -25,12 +28,12 @@
 }
 
 .query-form {
-    width: 45%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     /* border: 1px solid white; */
     justify-content: center;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .query-form form input {
@@ -49,7 +52,7 @@
     background: rgb(194, 16, 16);
     height: 2.5rem;
     width: 7rem;
-    margin: 0 auto;
+    margin: 0.5rem auto;
     color: white;
     border: rgb(194, 16, 16);
     border-radius: 0.5rem;

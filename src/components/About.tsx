@@ -6,15 +6,15 @@ export const About = () => {
     
     return (
         <div className='about'>
-            <div className='about-h1'><h1>RAJ ARYAN</h1></div>
             <div className='about-container'>
+                <div className='about-h1'><h1>RAJ ARYAN</h1></div>
                 <div className='about-text'>
                     {about}
                 </div>
-                <div className='about-image'>
+            </div>
+            <div className='about-image'>
 
                 </div>
-            </div>
         </div>
     );
 };

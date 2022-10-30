@@ -1,0 +1,103 @@
+{
+    "web": [
+        {
+            "name": "BMSCE Robotics Club",
+            "desc": "The Official Website of the RoboticsClub of BMS College of Engineering, Bangalore. Clean and easy to navigate",
+            "link": "https://robotics-club-bmsce.herokuapp.com/team",
+            "techs": ["ReactJS", "JavaScript", "Three-JS"],
+            "image": "https://github.com/rajaryan18/portfolio/blob/main/src/images/web1.png?raw=true"
+        },
+        {
+            "name": "Teacher Table",
+            "desc": "Full Stack application to act as a communication channel between Professors and their students to schedule meetings depending upon their Time Tables",
+            "link": "https://github.com/rajaryan18/Teacher-Table",
+            "techs": ["ReactJS", "Express", "NodeJS", "MongoDB", "ParticleJS", "JWT"],
+            "image": ""
+        },
+        {
+            "name": "Como Estas",
+            "desc": "Job Hiring Platform for HackADuck conducted by IET and SDS BIT Mesra. Companies and individuals can post jobs along with the job requirements and job seekers can use filters and various useful tools to get their dream jobs",
+            "link": "",
+            "techs": ["ReactJS", "Express", "NodeJS", "MongoDB", "Animations", "Firebase", "Material-UI"],
+            "image": ""
+        },
+        {
+            "name": "Portfolio",
+            "desc": "Portfolio Website to showcase my skills and knowledge. Made during IEEE Lead 3.0",
+            "link": "",
+            "techs": ["React", "TypeScript", "Animations", "Codeforces API"],
+            "image": ""
+        },
+        {
+            "name": "Cinema Hall",
+            "desc": "Web Application database with a vast information on Movies and TV Shows. Search by adding filters or by popularity. Search for upcoming movies and shows. Rate them and leave comments for others to come",
+            "link": "",
+            "techs": ["NextJS", "NodeJS", "Express", "JWT", "Movie API", "SASS"],
+            "image": ""
+        }
+    ],   
+    "robotics": [
+        {
+            "name": "LIght Distancing And Ranging Bot",
+            "desc": "A Light Distancing and Ranging (LIDAR) Bot is used to map surroundings using light being reflected off the surface. Made a LIDAR and passed it's data over to a Python Server to Process and plot a graph",
+            "link": "https://github.com/rajaryan18/LIDAR",
+            "techs": ["Arduino Nano", "IR Sensor", "Python", "Sockets"],
+            "image": ""
+        },
+        {
+            "name": "Agribot",
+            "desc": "Simulated an Agribot to perform it's tasks autonomously from movement to detection to harvesting. Simulation was done on Gazebo and RViz",
+            "link": "https://github.com/rajaryan18/ab_1639",
+            "techs": ["ROS Noetic", "Python", "Gazebo", "RViz", "Octomap", "MoveIt Planning Framework", "Linux", "OpenCV"],
+            "image": ""
+        }
+    ],
+    "blockchain": [
+        {
+            "name": "Contractor",
+            "desc": "A Web Application where contracts can be signed over a Blockchain network maintaining it's validity and safety",
+            "link": "https://github.com/rajaryan18/Contractor",
+            "techs": ["Ethereum", "Solidity", "Brownie", "ReactJS", "Web3.js"],
+            "image": ""
+        }
+    ],
+    "ml": [
+        {
+            "name": "Heart Attack Predictor",
+            "desc": "An Application that predicts the percentage of possibility of a person getting Heart Attacks in the future using relevant data like weight, habits, etc. Using KNN and Support Vector Regression to calcuate the percentages",
+            "link": "https://github.com/rajaryan18/Heart-Attack-Predictor",
+            "techs": ["KNN", "Support Vector Regression", "Python", "Flask", "Scikit Learn"],
+            "image": ""
+        },
+        {
+            "name": "Computer Vision Modules",
+            "desc": "A collection of modules commonly used for Computer Vision Projects like Face Detection, Hand Tracking, Pose Estimation Module, Face Mesh Generator etc",
+            "link": "https://github.com/rajaryan18/modules-opencv",
+            "techs": ["OpenCV", "MediaPipe", "Python"],
+            "image": ""
+        },
+        {
+            "name": "Sign Language Detection",
+            "desc": "A Neural Network to detect and understand Sign Languages. Dataset was taken from Kaggle and a Neural Network was trained over it. Achieved an Accuracy of 71.3%",
+            "link": "",
+            "techs": ["Tensorflow-Keras", "Convolutional Neural Network", "Matplotlib", "Python"],
+            "image": ""
+        }
+    ],
+    "Misc": [
+        {
+            "name": "Connect-4",
+            "desc": "The Famous Game of Connect 4 replicated in Python where the computer plays the most optimal move according to the user's move",
+            "link": "https://github.com/Alphaviper7769/connect-4",
+            "techs": ["Python", "OpenCV", "Programming"],
+            "image": ""
+        },
+        {
+            "name": "Codehut",
+            "desc": "A Python Module that brings Codeforces to your terminal. Simple commands to practice problems in the comfort of your favourite text editor. Filter problems using tags and ratings. Get latest contests.",
+            "link": "https://github.com/rajaryan18/codehut",
+            "techs": ["Python", "ArgsParse", "Codeforces API", "CLI"],
+            "image": ""
+        }
+    ]
+}

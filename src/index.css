@@ -15,7 +15,7 @@ body::-webkit-scrollbar { width: 0rem; }
     display: flex;
     z-index: 1;
     overflow-y: hidden;
-    animation: spin 20s infinite linear;
+    animation: spin 50s infinite linear;
     width: 110vh;
     position: fixed;
     right: -30rem;
