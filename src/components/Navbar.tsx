@@ -10,6 +10,7 @@ export const Navbar = () => {
             <h3>ROBOTICS</h3>
             <h3>MISCELLANEOUS</h3>
             <h3>COMPETITIVE PROGRAMMING</h3>
+            
         </div>
     );
 };

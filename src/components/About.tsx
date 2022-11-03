@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './About.css';
 
 export const About = () => {
     const about: string = "CSE Undergrad Student at Birla Institute of Technology, Mesra. I am an explorer who likes to learn by diving deep into the topic and hands on projects";
-    
+    const [rotate, setRotate] = useState<boolean>(false);
+    const rotateDiv = (): void => {
+        setRotate(true);
+    }
     return (
-        <div className='about'>
+        <div className={`about ${rotate && 'rotate-about'}`}>
             <div className='about-container'>
                 <div className='about-h1'><h1>RAJ ARYAN</h1></div>
                 <div className='about-text'>
                     {about}
+                </div>
+                <div className="about-button" onClick={rotateDiv}>
+                    MORE
                 </div>
             </div>
             <div className='about-image'>

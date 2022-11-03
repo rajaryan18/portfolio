@@ -14,13 +14,20 @@
     }
 }
 
+.main-rotate-clock {
+    animation: rot 50s infinite linear;
+}
+
+.main-rotate-anticlock {
+    animation: rotopp 50s infinite linear;
+}
+
 .main-container {
     width: inherit;
     padding: auto;
     padding-top: 5rem;
     margin: 0 auto;
     /* align-items: center; */
-    animation: rot 50s infinite linear;
     /* height: 100vh; */
 }
 
@@ -38,7 +45,7 @@
     margin-top: 8rem;
 }
 
-.main-img img {
+.main-img > img {
     border-radius: 30rem;
     height: 30rem;
     width: 30rem;
@@ -56,7 +63,6 @@
     /* left: -2rem; */
     font-size: 1.5rem;
     width:fit-content;
-    animation: rotopp 50s infinite linear;
 }
 
 .main-content {
@@ -90,13 +96,92 @@
     border-radius: 1rem;
     cursor: pointer;
     height: fit-content;
-    animation: rotopp 50s infinite linear;
 }
 
-.main-skill:hover {
+.main-skill:hover, .main-skill-after:hover, .skill-detail > h1 section:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
-.main-skill:active {
+.main-skill:active, .main-skill-after:active, .skill-detail > h1 section:active {
     transform: scale(0.98);
+}
+
+.main-content-after {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main-skills-after {
+    width: max-content;
+    height: auto;
+}
+
+.main-skill-after {
+    width: 17rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.main-head-after {
+    display: none;
+}
+
+.main-container-after {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+}
+
+.skill-detail {
+    background: rgba(49, 46, 46, 0.5); 
+    height: inherit;
+    width: inherit;
+    margin: 0 1rem;
+    border-radius: 1rem;
+}
+
+.skill-detail > h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+.main-projects {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    justify-content: space-between;
+    height: 80%;
+    align-items: center;
+}
+
+.left-button, .right-button {
+    font-size: 1.5rem;
+}
+
+.left-button:hover, .right-button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.left-button:active, .right-button:active {
+    transform: scale(0.98);
+}
+
+.projects-div {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    width: 90%;
+    height: 100%;
+}
+
+@media (max-width: 789px) {
+    .main-skills-after {
+        display: none;
+    }
 }

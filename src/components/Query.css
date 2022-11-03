@@ -69,3 +69,17 @@
     transform: scale(0.98);
     cursor: pointer;
 }
+
+@media (max-width: 789px) {
+    .query-vr {
+        display: none;
+    }
+
+    .query-container {
+        flex-direction: column;
+    }
+
+    .query-text {
+        width: fit-content; 
+    }
+}

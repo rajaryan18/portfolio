@@ -13,7 +13,10 @@ export const Projects = (props: ProjectProp) => {
     return (
         <div className='project-container'>
             <img src={props.image} alt={props.name} />
-            <h1>{props.name}</h1>
+            <div className='project-h1'>
+                <h1>{props.name}</h1>
+                <p><a href={props.link} target="_blank">View</a></p>
+            </div>
             <div className='project-desc'>
                 {props.desc}
             </div>
@@ -22,7 +25,6 @@ export const Projects = (props: ProjectProp) => {
                     return <section>{tech}</section>;
                 })}
             </div>
-            <p>{props.link}</p>
         </div>
     );
 };

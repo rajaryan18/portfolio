@@ -1,0 +1,50 @@
+.project-container > img {
+    width: 78%;
+}
+
+.project-h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: -0.5rem 2vw;
+}
+
+.project-h1 > p {
+    /* margin-right: 5vw; */
+    background: rgb(226, 22, 22);
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.project-h1 > p > a {
+    color: white;
+    text-decoration: none;
+}
+
+.project-h1 > p:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.project-h1 > p:active {
+    transform: scale(0.98);
+}
+
+.project-desc {
+    text-align: left;
+}
+
+.project-skill {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-skill > section {
+    margin: 0.5rem 1rem;
+    /* border: 1px solid purple; */
+    background: rgb(212, 40, 169);
+    padding: 0.5rem 1rem;
+}

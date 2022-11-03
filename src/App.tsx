@@ -9,7 +9,6 @@ import { Main } from './components/Main';
 const App = () => {
     return (
         <>
-            <Navbar />
             <img src="https://github.com/rajaryan18/portfolio/blob/main/src/images/ring.png?raw=true" alt="Image" className='ring-img' />
             <div className='app-card'>
                 <Card><About /></Card>
