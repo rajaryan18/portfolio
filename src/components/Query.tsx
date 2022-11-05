@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Query.css';
+import { send } from '@emailjs/browser';
 
 export const Query = () => {
     type Form = {
@@ -13,12 +14,27 @@ export const Query = () => {
 
     const { email, message }: Form = data;
 
+    var template = {
+        from_name: email,
+        message: message
+    }
+
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setData({ ...data, [e.target.name]: e.target.value });
     };
 
     const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
+        send("service_digiio2", "template_q4csgut", template, "vXCGI1-XeJDnLYqtJ")
+        .then(function(res) {
+            console.log("Success");;
+        }, function(err) {
+            console.log("Error: ", err);
+        });
+        setData({
+            email: '',
+            message: ''
+        })
     }
 
     return (

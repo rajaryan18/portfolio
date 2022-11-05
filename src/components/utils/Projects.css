@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: -0.5rem 2vw;
+    margin: 0.5rem 2vw;
 }
 
 .project-h1 > p {
@@ -43,7 +43,7 @@
 }
 
 .project-skill > section {
-    margin: 0.5rem 1rem;
+    margin: 1rem 1rem;
     /* border: 1px solid purple; */
     background: rgb(212, 40, 169);
     padding: 0.5rem 1rem;

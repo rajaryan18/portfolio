@@ -8,6 +8,7 @@
 }
 
 .query-vr {
+    display: flex;
     width: 5px;
     background: white;
     border-radius: 10rem;
@@ -23,7 +24,7 @@
     background: rgba(15, 15, 15, 0.3);
 }
 
-.query-text h1 {
+.query-text > h1 {
     font-size: 3rem;
 }
 
@@ -36,7 +37,7 @@
     margin: 0;
 }
 
-.query-form form input {
+.query-form form > input {
     margin: 1rem auto;
     background: none;
     color: white;
@@ -48,7 +49,7 @@
     border-radius: 2rem;
 }
 
-.query-form form button {
+.query-form form > button {
     background: rgb(194, 16, 16);
     height: 2.5rem;
     width: 7rem;
@@ -58,19 +59,19 @@
     border-radius: 0.5rem;
 }
 
-.query-form form button:hover {
+.query-form > form > button:hover {
     background: rgb(207, 42, 42);
     transform: scale(1.05);
     cursor: pointer;
 }
 
-.query-form form button:active {
+.query-form > form > button:active {
     background: rgb(207, 42, 42);
     transform: scale(0.98);
     cursor: pointer;
 }
 
-@media (max-width: 789px) {
+@media only screen and (max-width: 900px) {
     .query-vr {
         display: none;
     }

@@ -108,6 +108,7 @@
 }
 
 .main-content-after {
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -145,8 +146,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 1rem 1rem;
-    font-size: 2.5rem;
+    margin: 1.5rem 1rem;
+    font-size: 3rem;
     text-decoration: underline;
 }
 
@@ -180,8 +181,25 @@
     height: 100%;
 }
 
-@media (max-width: 789px) {
+@media only screen and (max-width: 900px) {
     .main-skills-after {
-        display: none;
+        margin: 0.5rem;
+    }
+
+    .main-skill-after {
+        width: 10rem;
+        height: 3rem;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .main-content-after {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .main-container-after {
+        flex-direction: column;
     }
 }
