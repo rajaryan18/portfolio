@@ -4,12 +4,14 @@ import './About.css';
 export const About = () => {
     const about: string = "CSE Undergrad Student at Birla Institute of Technology, Mesra. I am an explorer who likes to learn by diving deep into the topic and hands on projects";
     const [rotate, setRotate] = useState<boolean>(false);
+    const [firstitr, setFirstItr] = useState<boolean>(true);
     const rotateDiv = (): void => {
         setRotate(!rotate);
+        setFirstItr(false);
     }
     return (
         <>
-            {!rotate ? <div className={`about appear`}>
+            <div className={`about ${!firstitr ? rotate ? 'rotate' : 'norotate' : ''}`}>
                 <div className='about-container'>
                     <div className='about-h1'><h1>RAJ ARYAN</h1></div>
                     <div className='about-text'>
@@ -22,8 +24,8 @@ export const About = () => {
                 <div className='about-image'>
 
                     </div>
-            </div> :
-            <div className={`more-info appear`}>
+            </div>
+            <div className={`more-info ${!firstitr ? rotate ? 'spin': 'nospin' : ''}`}>
                 <h1>EDUCATION</h1>
                 <ul style={{ listStyle: 'none' }}>
                     <li className="more-info-heading">
@@ -48,7 +50,7 @@ export const About = () => {
                 <div className="about-button" onClick={rotateDiv}>
                     BACK
                 </div>
-            </div>}
+            </div>  
         </>
     );
 };

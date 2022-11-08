@@ -5,7 +5,7 @@ type ProjectProp = {
     image?: string,
     name: string,
     techs: Array<string>,
-    desc: string,
+    desc?: string,
     link: string
 }
 

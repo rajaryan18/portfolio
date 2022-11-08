@@ -40,6 +40,24 @@ export const Main = () => {
         setCounter(count);
     };
 
+    const getCodeforces = async (): Promise<void> => {
+        // https://codeforces.com/api/user.info?handles
+        await fetch("https://codeforces.com/api/user.info?handles=rajaryan18")
+        .then((response) => response.json())
+        .then((data) => {
+            const projObj: ProjectObject[] = [{
+                image: data.result[0].titlePhoto,
+                name: "RajAryan18",
+                link: "https://codeforces.com/profile/RajAryan18",
+                techs: [data.result[0].rating, data.result[0].rank],
+                desc: ""
+            }]
+            setProject(projObj);
+        })
+        .catch((err) => console.log(err));
+        console.log(project);
+    }
+
     const setSkill = (skill: string): void => {
         if(skill === "web") {
             setProject(projects.web);
@@ -58,8 +76,7 @@ export const Main = () => {
             setHeaderModal("Blockchain Development");
         } else {
             setHeaderModal("Codeforces");
-            // get codeforces
-            
+            getCodeforces();
         }
         openModal();
     }
@@ -90,11 +107,19 @@ export const Main = () => {
                             <section onClick={closeModal}><AiOutlineClose /></section>
                         </h1>
                         <div className='main-projects'>
-                            <div className='left-button' onClick={leftClick}><AiOutlineArrowLeft /></div>
+                            {header !== "Codeforces" && <div className='left-button' onClick={leftClick}><AiOutlineArrowLeft /></div>}
                             <div className='projects-div'>
-                                {counter >= 0 && <Projects image={project[counter].image} name={project[counter].name} desc={project[counter].desc} link={project[counter].link} techs={project[counter].techs} />}
+                                {header !== "Codeforces" && counter >= 0 && <Projects image={project[counter].image} name={project[counter].name} desc={project[counter].desc} link={project[counter].link} techs={project[counter].techs} />}
+                                {header === "Codeforces" &&
+                                    <div className='codeforces'>
+                                        <img src={project[0].image} alt={project[0].name} />
+                                        <h1>{project[0].name}</h1>
+                                        <p>Rating: {project[0].techs[0]}</p>
+                                        <p>Rank: {project[0].techs[1]}</p>
+                                    </div>
+                                }
                             </div>
-                            <div className='right-button' onClick={rightClick}><AiOutlineArrowRight /></div>
+                            {header !== "Codeforces" && <div className='right-button' onClick={rightClick}><AiOutlineArrowRight /></div>}
                         </div>
                     </div>
                 }
