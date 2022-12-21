@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Main.css';
 import projects from './utils/Projects.json';
 import { Projects } from './utils/Projects';
@@ -13,15 +13,21 @@ type ProjectObject = {
 }
 
 export const Main = () => {
-    const [show, setShow] = useState<Boolean>(false);
-    const openModal = (): void => {
-        setShow(true);
-    };
+    const [show, setShow] = useState<Boolean>(true);
     const closeModal = (): void => {
         setShow(false);
     };
 
-    const [header, setHeader] = useState<string>("");
+    const codeforces = new Map([
+        ['pupil', 'green'],
+        ['newbie', 'gray'],
+        ['specialist', 'light blue'],
+        ['expert', 'dark blue'],
+        ['candidate master', 'purple'],
+        ['master', 'yellow']
+    ]);
+
+    const [header, setHeader] = useState<string>("Codeforces");
     const setHeaderModal = (head: string): void => {
         setHeader(head);
     };
@@ -40,25 +46,30 @@ export const Main = () => {
         setCounter(count);
     };
 
-    const getCodeforces = async (): Promise<void> => {
-        // https://codeforces.com/api/user.info?handles
-        await fetch("https://codeforces.com/api/user.info?handles=rajaryan18")
-        .then((response) => response.json())
-        .then((data) => {
-            const projObj: ProjectObject[] = [{
-                image: data.result[0].titlePhoto,
-                name: "RajAryan18",
-                link: "https://codeforces.com/profile/RajAryan18",
-                techs: [data.result[0].rating, data.result[0].rank],
-                desc: ""
-            }]
-            setProject(projObj);
-        })
-        .catch((err) => console.log(err));
-        console.log(project);
-    }
+    useEffect(() => {
+        const getCodeforces = async (): Promise<void> => {
+            // https://codeforces.com/api/user.info?handles
+            await fetch("https://codeforces.com/api/user.info?handles=rajaryan18")
+            .then((response) => response.json())
+            .then((data) => {
+                const projObj: ProjectObject[] = [{
+                    image: data.result[0].titlePhoto,
+                    name: "RajAryan18",
+                    link: "https://codeforces.com/profile/RajAryan18",
+                    techs: [data.result[0].rating, data.result[0].rank],
+                    desc: ""
+                }]
+                setProject(projObj);
+            })
+            .catch((err) => console.log(err));
+            console.log(project);
+        }
+
+        header === "Codeforces" && getCodeforces();
+    }, [header]);
 
     const setSkill = (skill: string): void => {
+        setCounter(0);
         if(skill === "web") {
             setProject(projects.web);
             setHeaderModal("Web Development");
@@ -76,9 +87,9 @@ export const Main = () => {
             setHeaderModal("Blockchain Development");
         } else {
             setHeaderModal("Codeforces");
-            getCodeforces();
         }
-        openModal();
+        // openModal();
+        setShow(true);
     }
 
     return (
@@ -110,12 +121,14 @@ export const Main = () => {
                             {header !== "Codeforces" && <div className='left-button' onClick={leftClick}><AiOutlineArrowLeft /></div>}
                             <div className='projects-div'>
                                 {header !== "Codeforces" && counter >= 0 && <Projects image={project[counter].image} name={project[counter].name} desc={project[counter].desc} link={project[counter].link} techs={project[counter].techs} />}
-                                {header === "Codeforces" &&
+                                {header === "Codeforces" && project.length > 0 &&
                                     <div className='codeforces'>
-                                        <img src={project[0].image} alt={project[0].name} />
-                                        <h1>{project[0].name}</h1>
-                                        <p>Rating: {project[0].techs[0]}</p>
-                                        <p>Rank: {project[0].techs[1]}</p>
+                                        <img src={project[0].image} alt={project[0].name} height="inherit" width="inherit" />
+                                        <div className='codeforces-details' style={{ color: codeforces.get(project[0].techs[1]) }}>
+                                            <h1>{project[0].name}</h1>
+                                            <p><b>Rating:</b> {project[0].techs[0]}</p>
+                                            <p><b>Rank:</b> {project[0].techs[1].toUpperCase()}</p>
+                                        </div>
                                     </div>
                                 }
                             </div>
